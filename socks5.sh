@@ -128,11 +128,11 @@ ADD_USER(){
 		
 		SHOW_SOCKS5
 		Address=$(curl -s ipv4.ip.sb)
-		Shadowrocket_Address=$(echo ${username}:${password}@${Address}:1080 | base64)
+		Shadowrocket_Address=$(echo ${username}:${password}@${Address}:10086 | base64)
 		echo "完成,连接用户:${username} 连接密码:${password} 连接地址:${Address}"
 		echo "Done,UserName:${username} PassWord:${password} Address:${Address}"
 		echo
-		echo "Telegram : tg://socks?server=${Address}&port=1080&user=${username}&pass=${password}"
+		echo "Telegram : tg://socks?server=${Address}&port=10086&user=${username}&pass=${password}"
 		echo "Shadowrocket : socks://${Shadowrocket_Address}"
 	fi
 }
